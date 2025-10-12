@@ -8,7 +8,7 @@ import lombok.*;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-@Table(name = "member_food")
+@Table(name = "member_foods")
 @Builder
 @Getter
 public class MemberFood {
