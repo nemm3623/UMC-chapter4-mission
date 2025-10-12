@@ -2,10 +2,14 @@ package com.example.umcchapter4mission.member.domain;
 
 
 import com.example.umcchapter4mission.global.domain.BaseTimeEntity;
+import com.example.umcchapter4mission.member.domain.mapping.MemberFood;
 import com.example.umcchapter4mission.member.enums.Gender;
 import com.example.umcchapter4mission.member.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -37,9 +41,10 @@ public class Member extends BaseTimeEntity {
     @Builder.Default
     private Status status = Status.ACTIVE;
 
-
     private int point;
 
+    @OneToMany(mappedBy = "member")
+    private List<MemberFood> memberFoodList = new ArrayList<>();
 }
 
 
