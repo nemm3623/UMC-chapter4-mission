@@ -1,6 +1,7 @@
 package com.example.umcchapter4mission.member.domain;
 
 
+import com.example.umcchapter4mission.global.domain.BaseTimeEntity;
 import com.example.umcchapter4mission.member.enums.Gender;
 import com.example.umcchapter4mission.member.enums.Status;
 import jakarta.persistence.*;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "members")
 @Getter
-public class Member {
+public class Member extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,5 +33,5 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    
+
 }
