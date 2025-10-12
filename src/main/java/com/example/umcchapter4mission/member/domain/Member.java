@@ -5,6 +5,7 @@ import com.example.umcchapter4mission.global.domain.BaseTimeEntity;
 import com.example.umcchapter4mission.member.domain.mapping.MemberFood;
 import com.example.umcchapter4mission.member.enums.Gender;
 import com.example.umcchapter4mission.member.enums.Status;
+import com.example.umcchapter4mission.memberMission.domain.MemberMission;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -45,6 +46,9 @@ public class Member extends BaseTimeEntity {
 
     @OneToMany(mappedBy = "member")
     private List<MemberFood> memberFoodList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member")
+    private List<MemberMission> memberMissionList = new ArrayList<>();
 }
 
 
