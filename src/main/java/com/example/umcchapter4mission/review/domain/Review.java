@@ -1,7 +1,11 @@
 package com.example.umcchapter4mission.review.domain;
 
+import com.example.umcchapter4mission.reviewMember.domain.ReviewMember;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -18,5 +22,8 @@ public class Review {
     private String title;
 
     private String content;
+
+    @OneToMany(mappedBy = "review")
+    private List<ReviewMember> reviewMemberList = new ArrayList<>();
 
 }
