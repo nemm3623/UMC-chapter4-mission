@@ -1,13 +1,12 @@
 package com.example.umcchapter4mission.review.domain;
 
-import com.example.umcchapter4mission.reviewMember.domain.ReviewMember;
+import com.example.umcchapter4mission.member.domain.Member;
+import com.example.umcchapter4mission.store.domain.Store;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -28,9 +27,12 @@ public class Review {
     @Column(nullable = false)
     @Min(0)
     @Max(5)
-    private float star;
+    private Float star;
 
-    @OneToMany(mappedBy = "review")
-    private List<ReviewMember> reviewMemberList = new ArrayList<>();
+    @ManyToOne
+    Member member;
+
+    @ManyToOne
+    private Store store;
 
 }
