@@ -1,4 +1,4 @@
-package com.example.umcchapter5mission.member.repository;
+package com.example.umcchapter4mission.member;
 
 import com.example.umcchapter4mission.member.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
