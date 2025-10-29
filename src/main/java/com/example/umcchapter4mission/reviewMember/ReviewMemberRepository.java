@@ -1,4 +1,4 @@
-package com.example.umcchapter5mission.reviewmember.repository;
+package com.example.umcchapter4mission.reviewMember;
 
 import com.example.umcchapter4mission.reviewMember.domain.ReviewMember;
 import org.springframework.data.jpa.repository.JpaRepository;
