@@ -1,0 +1,24 @@
+package com.example.umcchapter4mission.test.controller;
+
+
+import com.example.umcchapter4mission.global.apiPayload.ApiResponse;
+import com.example.umcchapter4mission.test.dto.res.TestResDTO;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/temp")
+@RequiredArgsConstructor
+public class TempRestController {
+
+    // 예외 상황
+    @GetMapping("/exception")
+    public ApiResponse<TestResDTO.Exception> exception(
+            @RequestParam Long flag
+    ) {
+        return null;
+    }
+}
