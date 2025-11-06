@@ -2,6 +2,7 @@ package com.example.umcchapter4mission.test.controller;
 
 
 import com.example.umcchapter4mission.global.apiPayload.ApiResponse;
+import com.example.umcchapter4mission.global.apiPayload.code.GeneralSuccessCode;
 import com.example.umcchapter4mission.test.dto.res.TestResDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,4 +22,12 @@ public class TempRestController {
     ) {
         return null;
     }
+
+    @GetMapping("/success")
+    public ApiResponse<TestResDTO.Testing> getAllMembers() {
+        return ApiResponse.onSuccess(
+                GeneralSuccessCode.OK, null
+        );
+    }
+
 }
