@@ -2,6 +2,7 @@ package com.example.umcchapter4mission.review.domain;
 
 import com.example.umcchapter4mission.member.domain.Member;
 import com.example.umcchapter4mission.store.domain.Store;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -34,5 +35,6 @@ public class Review {
 
     @ManyToOne
     private Store store;
+
 
 }
