@@ -1,8 +1,8 @@
 package com.example.umcchapter4mission.review.repository;
 
 import com.example.umcchapter4mission.review.domain.QReview;
-import com.example.umcchapter4mission.review.dto.MyReviewDto;
-import com.example.umcchapter4mission.review.dto.ReviewResponseDto;
+import com.example.umcchapter4mission.review.dto.req.MyReviewReqDto;
+import com.example.umcchapter4mission.review.dto.res.ReviewResponseDto;
 import com.example.umcchapter4mission.store.domain.QStore;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -18,7 +18,7 @@ public class ReviewRepositoryCustomImpl implements ReviewRepositoryCustom {
     private final JPAQueryFactory queryFactory;
 
     @Override
-    public List<ReviewResponseDto> searchMyReviews(MyReviewDto reviewDto) {
+    public List<ReviewResponseDto> searchMyReviews(MyReviewReqDto reviewDto) {
 
         QReview review = QReview.review;
 
