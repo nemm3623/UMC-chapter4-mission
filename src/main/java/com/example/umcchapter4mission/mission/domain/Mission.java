@@ -1,6 +1,7 @@
 package com.example.umcchapter4mission.mission.domain;
 
 import com.example.umcchapter4mission.memberMission.domain.MemberMission;
+import com.example.umcchapter4mission.storeMission.domain.StoreMission;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,5 +27,7 @@ public class Mission {
     @OneToMany(mappedBy = "mission")
     private List<MemberMission> memberMissions = new ArrayList<>();
 
+    @OneToMany(mappedBy = "mission")
+    private List<StoreMission> storeMissions = new ArrayList<>();
 
 }

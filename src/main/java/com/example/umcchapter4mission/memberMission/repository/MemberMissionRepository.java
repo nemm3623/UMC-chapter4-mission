@@ -1,4 +1,4 @@
-package com.example.umcchapter4mission.memberMission;
+package com.example.umcchapter4mission.memberMission.repository;
 
 
 import com.example.umcchapter4mission.memberMission.domain.MemberMission;
